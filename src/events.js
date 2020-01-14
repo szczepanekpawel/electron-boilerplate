@@ -1,10 +1,13 @@
-import {ipcMain} from 'electron';
-import {mainWindow} from './background';
+import {ipcMain, ipcRenderer} from 'electron';
+import {init, scan} from 'node-wifi';
 
-ipcMain.on("btnclick", function (event, arg) {
-  const facebookURL = "https://www.facebook.com";
-  mainWindow.loadURL(facebookURL);
-  // mainWindow.show();
+ipcMain.on("btnclick", (event, arg) => {
 
-  event.sender.send("btnclick-task-finished", "yes");
+  console.log(event);
+  event.sender.send('foo', 'data-aaa');
+
+  // init({iface: null});
+  // scan().then((data) => {
+  // })
+
 });

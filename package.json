@@ -30,13 +30,15 @@
     "release": "npm test && webpack --config=build/webpack.app.config.js --env=production && electron-builder"
   },
   "dependencies": {
-    "fs-jetpack": "^2.1.0"
+    "fs-jetpack": "^2.1.0",
+    "node-wifi": "^2.0.12"
   },
   "devDependencies": {
     "@babel/core": "^7.5.5",
     "@babel/preset-env": "^7.5.5",
     "babel-loader": "^8.0.0-beta.4",
     "chai": "^4.1.0",
+    "copy-webpack-plugin": "^5.1.1",
     "css-loader": "^3.1.0",
     "electron": "^4.0.0",
     "electron-builder": "^21.1.5",

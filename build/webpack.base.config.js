@@ -1,6 +1,7 @@
 const path = require("path");
 const nodeExternals = require("webpack-node-externals");
 const FriendlyErrorsWebpackPlugin = require("friendly-errors-webpack-plugin");
+const CopyPlugin = require("copy-webpack-plugin");
 
 const translateEnvToMode = (env) => {
   if (env === "production") {
@@ -38,7 +39,10 @@ module.exports = env => {
       ]
     },
     plugins: [
-      new FriendlyErrorsWebpackPlugin({ clearConsole: env === "development" })
+      new FriendlyErrorsWebpackPlugin({clearConsole: env === "development"}),
+      new CopyPlugin([
+        {from: path.resolve(__dirname, '../src/views'), to: path.resolve(__dirname, '../app/views')}
+      ]),
     ]
   };
 };
