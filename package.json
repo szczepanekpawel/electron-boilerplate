@@ -1,15 +1,14 @@
 {
-  "name": "electron-boilerplate",
-  "productName": "Electron Boilerplate",
-  "description": "Starter for your Electron application",
-  "version": "0.0.0",
+  "name": "electron-techdays",
+  "productName": "Electron TechDays",
+  "description": "Electron app for TechDays",
+  "version": "0.0.1",
   "private": true,
-  "author": "Mr. Gumby <mr.gumby@example.com>",
-  "copyright": "© 2017, Gumby inc.",
-  "homepage": "http://example.com",
+  "author": "szczepanekpawel@gmail.com",
+  "copyright": "",
   "main": "app/background.js",
   "build": {
-    "appId": "com.example.electron-boilerplate",
+    "appId": "com.example.electron-techdays",
     "files": [
       "app/**/*",
       "node_modules/**/*",
