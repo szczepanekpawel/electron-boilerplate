@@ -8,7 +8,10 @@ export class MainWindow {
     this.window = createWindow("main", {
       width: 1000,
       height: 600,
-      show: false
+      show: false,
+      webPreferences: {
+        nodeIntegration: true
+      }
     });
   }
 
