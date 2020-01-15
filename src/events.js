@@ -1,7 +1,7 @@
 import './drone-events';
 import './photos-events';
 import './wifi-events';
-import {ipcMain} from "electron";
+import {BrowserWindow, ipcMain} from "electron";
 import {mainWindow} from "./background";
 
 
@@ -15,5 +15,15 @@ ipcMain.on("fly-action", async (event, arg) => {
 
 ipcMain.on("wifi-action", async (event, arg) => {
   mainWindow.loadView('wifi.html');
+});
+
+ipcMain.on("page-action", async (event, arg) => {
+  const sWindow = new BrowserWindow({
+    width: 800,
+    height: 500,
+    show: true
+  });
+
+  await sWindow.loadURL('http://skapiec.pl');
 });
 

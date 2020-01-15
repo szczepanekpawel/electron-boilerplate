@@ -23,25 +23,25 @@ ipcMain.on("drone-land", async (event, arg) => {
 
 
 ipcMain.on("drone-left", async (event, arg) => {
-  await drone.send("left", {value: 20});
+  await drone.send("left", {value: 50});
 });
 
 ipcMain.on("drone-right", async (event, arg) => {
-  await drone.send("right", {value: 20});
+  await drone.send("right", {value: 50});
 });
 
 ipcMain.on("drone-forward", async (event, arg) => {
-  await drone.send("forward", {value: 20});
+  await drone.send("forward", {value: 50});
 });
 
 ipcMain.on("drone-backward", async (event, arg) => {
-  await drone.send("back", {value: 20});
+  await drone.send("back", {value: 50});
 });
 
 ipcMain.on("drone-up", async (event, arg) => {
-  await drone.send("up", {value: 20});
+  await drone.send("up", {value: 50});
 });
 
 ipcMain.on("drone-down", async (event, arg) => {
-  await drone.send("down", {value: 20});
+  await drone.send("down", {value: 50});
 });

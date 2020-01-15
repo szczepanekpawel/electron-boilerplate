@@ -9,7 +9,7 @@ if (startupButton) {
   });
 }
 
-const landButton = document.getElementById('startup');
+const landButton = document.getElementById('land');
 if (landButton) {
   landButton.addEventListener('click', () => {
     ipcRenderer.send('drone-land');
