@@ -1,12 +1,4 @@
-import {ipcRenderer} from 'electron';
-
-const btnclick = document.getElementById('loadnewwindow');
-
-btnclick.addEventListener('click', function () {
-  ipcRenderer.send('btnclick', {foo: 'bar'});
-});
-
-
-ipcRenderer.on('foo', (d, data) => {
-  console.log(d, data);
-});
+import './renderers/drone-renderer';
+import './renderers/main-menu-renderer';
+import './renderers/photo-renderer';
+import './renderers/wifi-renderer';

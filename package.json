@@ -30,11 +30,14 @@
     "release": "npm test && webpack --config=build/webpack.app.config.js --env=production && electron-builder"
   },
   "dependencies": {
+    "bootstrap": "^4.4.1",
     "camera-capture": "0.0.11",
-    "electron-print": "^1.0.2",
     "fs-jetpack": "^2.2.3",
+    "node-run-cmd": "^1.0.1",
     "node-wifi": "^2.0.12",
-    "puppeteer": "^2.0.0"
+    "puppeteer": "^2.0.0",
+    "tello-drone": "^3.0.1",
+    "wifi-control": "^2.0.1"
   },
   "devDependencies": {
     "@babel/core": "^7.8.3",

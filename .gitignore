@@ -10,4 +10,4 @@ Thumbs.db
 /app/front-app.js
 /app/background.js
 /app/**/*.map
-/app/views
+/app/

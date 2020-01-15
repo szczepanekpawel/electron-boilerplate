@@ -41,7 +41,9 @@ module.exports = env => {
     plugins: [
       new FriendlyErrorsWebpackPlugin({clearConsole: env === "development"}),
       new CopyPlugin([
-        {from: path.resolve(__dirname, '../src/views'), to: path.resolve(__dirname, '../app/views')}
+        {from: path.resolve(__dirname, '../src/views'), to: path.resolve(__dirname, '../app/views')},
+        {from: path.resolve(__dirname, '../node_modules/bootstrap/dist/css'), to: path.resolve(__dirname, '../app/css')},
+        {from: path.resolve(__dirname, '../resources/images/'), to: path.resolve(__dirname, '../app/images')},
       ]),
     ]
   };

@@ -1,32 +1,19 @@
-import {ipcMain, ipcRenderer} from 'electron';
-import {print} from 'electron-print';
-import {VideoCapture} from 'camera-capture'
-import {writeFileSync} from 'fs';
-
-ipcMain.on("btnclick", async (event, arg) => {
-
-  console.log(event);
-  event.sender.send('foo', 'data-aaa');
+import './drone-events';
+import './photos-events';
+import './wifi-events';
+import {ipcMain} from "electron";
+import {mainWindow} from "./background";
 
 
-  const camera = new VideoCapture({
-    mime: 'image/jpeg'
-  });
-
-  await camera.initialize();
-
-
-  let f = await camera.readFrame();
-  const filename = __dirname + '/tmp1.png';
-  await writeFileSync(filename, f.data);
-  await camera.stop();
-
-
-  print(filename, f.width, f.height);
-
-
-  // init({iface: null});
-  // scan().then((data) => {
-  // })
-
+ipcMain.on("photo-action", async (event, arg) => {
+  mainWindow.loadView('photo.html');
 });
+
+ipcMain.on("fly-action", async (event, arg) => {
+  mainWindow.loadView('fly.html');
+});
+
+ipcMain.on("wifi-action", async (event, arg) => {
+  mainWindow.loadView('wifi.html');
+});
+

@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Electron TechDays</title>
+  <link rel="stylesheet" href="../css/bootstrap.css"/>
+</head>
+<body>
+
+<div class="container-fluid">
+
+  <h1>TechDays Demo</h1>
+
+  <div class="row" style="margin-bottom: 20px">
+    <div class="col">
+      <button type="button" class="btn btn-light" id="fly-action">Fly</button>
+      <button type="button" class="btn btn-light" id="photo-action">Take photo</button>
+      <button type="button" class="btn btn-light" id="wifi-action">Wifi</button>
+    </div>
+  </div>
+
+  <hr/>
+
+  <div style="margin-bottom: 50px">
+    <button type="button" class="btn btn-light" id="drone-connect">Connect</button>
+    <img src="../images/red-dot.png" id="drone-dot-status" style="width: 10px"/>
+  </div>
+
+  <div class="row">
+    <div class="col">
+      <div class="row">
+        <div class="col-2"></div>
+
+        <div class="col-3">
+          <button type="button" class="btn btn-primary" id="go-forward">Forward</button>
+        </div>
+
+        <div class="col-2"></div>
+      </div>
+
+      <div class="row">
+        <div class="col-2">
+          <button type="button" class="btn btn-primary" id="go-left">Left</button>
+        </div>
+        <div class="col-3"></div>
+        <div class="col-2">
+          <button type="button" class="btn btn-primary" id="go-right">Right</button>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-2"></div>
+        <div class="col-3">
+          <button type="button" class="btn btn-primary" id="go-backward">Backward</button>
+        </div>
+        <div class="col-2"></div>
+      </div>
+    </div>
+    <div class="col">
+      <button type="button" class="btn btn-success" id="startup">Start</button>
+      <button type="button" class="btn btn-danger" id="land">Land</button>
+      <button type="button" class="btn btn-dark" id="go-up">Up</button>
+      <button type="button" class="btn btn-dark" id="go-down">Down</button>
+    </div>
+  </div>
+
+
+</div>
+
+</body>
+
+<script src="../front-app.js"></script>
+</html>
+
+
+
