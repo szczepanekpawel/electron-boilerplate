@@ -1,5 +1,5 @@
 import {ipcMain} from 'electron';
-import {init, getCurrentConnections} from "node-wifi";
+import {init, scan} from "node-wifi";
 
 ipcMain.on("scan-wifi", async (event, arg) => {
 
@@ -7,6 +7,6 @@ ipcMain.on("scan-wifi", async (event, arg) => {
     iface: null
   });
 
-  const conn = await getCurrentConnections();
+  const conn = await scan();
   event.sender.send('scan-wifi-reply', conn);
 });
